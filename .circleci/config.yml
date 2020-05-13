@@ -1,18 +1,13 @@
-version: 2.1
-orbs:
-  node: circleci/node@12.16.1
+version: 2.1 # CircleCI version
 jobs:
-  build-and-test:
-    executor:
-      name: node/default
+  build:
+    docker:
+      - image: circleci/node:12.7.0
+
+    working_directory: ~/repo
+
     steps:
       - checkout
-      - node/with-cache:
-          steps:
-            - run: npm install
-            - run: yarn install
-            - run: npm run build
-workflows:
-    build-and-test:
-      jobs:
-        - build-and-test
+      - run: npm install
+      - run: yarn install
+      - run: npm run build
