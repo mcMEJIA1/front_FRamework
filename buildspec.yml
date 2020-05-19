@@ -20,7 +20,6 @@ phases:
     commands:
       -echo Building 
       -yarn run build
-artifacts:
-  files:
-    discard-paths: no
-    base-directory: dist
+paths:
+      # Build folder
+      - dist/
