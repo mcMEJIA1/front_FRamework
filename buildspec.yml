@@ -21,9 +21,9 @@ phases:
   build:
     commands:
       - echo Building 
-      - yarn run build
+      - npm run build
 artifacts:
   files:
     - "**/*"
   discard-paths: no
-  base-directory: spa
+  base-directory: dist
