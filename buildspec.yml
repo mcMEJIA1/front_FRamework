@@ -22,7 +22,5 @@ phases:
       -yarn run build
 artifacts:
   files:
-     - dist/*
-     - dist/**/*
     discard-paths: no
     base-directory: dist
